@@ -7,7 +7,7 @@ I will fill this out when I have a better idea of what I'm doing!
 
 
 ### Tasks Checklist:
-- [ ] Create __Github__ Repo
+- [X] Create __Github__ Repo
 - [ ] Create a single endpoint appliaction using __Golang__ and __Fiber__
   - [ ] returns JSON object with depicted content. 
     - Time stamp is dynamically generated.
