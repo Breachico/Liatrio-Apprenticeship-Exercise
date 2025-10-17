@@ -1,6 +1,6 @@
 module github.com/Breachico/Liatrio-Apprenticeship-Exercise
 
-go 1.25.2
+go 1.25.3
 
 require github.com/gofiber/fiber/v2 v2.52.9
 

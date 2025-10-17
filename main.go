@@ -1,7 +1,7 @@
 package main
 
 import (
-  // "os" // Prempting for later for Docker 
+  //"os" // Prempting for later for Docker 
   "time"
   "log"
   "github.com/gofiber/fiber/v2"
@@ -22,12 +22,10 @@ func main() {
 
   // add error handling
 
-  log.Fatal(app.Listen(":3000"))
+  //log.Fatal(app.Listen(":8080"))
 
-  // Premptive for later Docker imaging.
-  //port := os.Getenv("PORT")
-  //if port == "" { port == "3000"}
-  // Start the server on port 3000
-  //log.Fatal(app.Listen("0.0.0.0:" + "port"))
+  
+  // Start the server on port 8080
+  log.Fatal(app.Listen("0.0.0.0:3000"))
   
 }
