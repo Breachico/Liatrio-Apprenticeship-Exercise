@@ -8,13 +8,6 @@ import (
 )
 
 // Ref for JSON in GO: https://docs.gofiber.io/api/ctx#json
-type JObj struct {
-  Message string `json:"name"`
-  Timestamp int64 `json: "timestamp"`
-
-}
-
-
 func main() {
   // Initialize a new Fiber app
   app := fiber.New()
@@ -26,6 +19,8 @@ func main() {
       "timestamp": time.Now().Unix(),
     })
   })
+
+  // add error handling
 
   log.Fatal(app.Listen(":3000"))
 
