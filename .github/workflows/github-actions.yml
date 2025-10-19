@@ -1,0 +1,31 @@
+name: Apprenticeship Exercise Github Actions
+run-name: $${{ github.actor }} is running Github Actions.
+on:
+  push:
+    branches: ["main", "github_actions"]
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/chekout@v4
+
+      # ref: https://github.com/Breachico/Liatrio-Apprenticeship-Exercise/new/main?filename=.github%2Fworkflows%2Fdocker-image.yml&workflow_template=ci%2Fdocker-image
+
+      - name: Build Docker Image
+        run: docker build . --file Dockerfile --tag go-hello:$(date +%s)
+
+      - name: run tests
+        uses: liatrio/github-actions/apprentice-action@master
+
+#      - name: Publish
+
+
+#      - name: Deploy
+      
+
+
+
+
+
