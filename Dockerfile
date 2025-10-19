@@ -15,11 +15,11 @@ RUN go mod download
 # Copy source code into container
 COPY . .
 
-# Bulid application
-RUN go build -o go-hello
+# Build application
+RUN go build -o go-hello .
 
 # Inform Docker of the listening port
 EXPOSE 80
 
 # Begin application
-CMD ["/app/go-hello"]
+ENTRYPOINT ["/app/go-hello"]
