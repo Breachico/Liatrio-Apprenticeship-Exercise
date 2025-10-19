@@ -26,6 +26,6 @@ func main() {
 
   
   // Start the server on port 8080
-  log.Fatal(app.Listen("0.0.0.0:3000"))
+  log.Fatal(app.Listen("0.0.0.0:80"))
   
 }

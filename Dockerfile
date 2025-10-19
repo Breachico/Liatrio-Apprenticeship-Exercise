@@ -19,7 +19,7 @@ COPY . .
 RUN go build -o go-hello
 
 # Inform Docker of the listening port
-EXPOSE 3000
+EXPOSE 80
 
 # Begin application
 CMD ["/app/go-hello"]
