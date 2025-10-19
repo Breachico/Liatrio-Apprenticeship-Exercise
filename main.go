@@ -15,7 +15,7 @@ func main() {
   // Define a route for the GET method on the root path '/'
   app.Get("/", func(c *fiber.Ctx) error {
     return c.JSON(fiber.Map{
-      "message": "BRYCE EMERY",
+      "message": "My name is Bryce Emery",
       "timestamp": time.Now().Unix(),
     })
   })
