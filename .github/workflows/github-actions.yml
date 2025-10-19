@@ -16,8 +16,10 @@ jobs:
       - name: Build Docker Image
         run: docker build . --file Dockerfile --tag go-hello:$(date +%s)
 
-      - name: run tests
+      - name: Run Docker Image
         run: docker run -p 80:3000
+
+      - name: run tests
         uses: liatrio/github-actions/apprentice-action@master
 
 #      - name: Publish
