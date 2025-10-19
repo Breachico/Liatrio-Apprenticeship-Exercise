@@ -29,7 +29,7 @@ jobs:
       run: docker run --rm -p 80:80 go-hello
 
     - name: run tests
-        uses: liatrio/github-actions/apprentice-action@master
+      uses: liatrio/github-actions/apprentice-action@master
 
 #      - name: Publish
 
