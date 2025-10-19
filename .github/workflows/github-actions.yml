@@ -17,8 +17,8 @@ jobs:
         run: docker build . --file Dockerfile --tag go-hello:test
 
       - name: Build From Image
-        run: docker run -p 80:80 go-hello:test
-
+        run: docker run -d -p 80:80 go-hello:test
+ 
       - name: run tests
         uses: liatrio/github-actions/apprentice-action@master
 
