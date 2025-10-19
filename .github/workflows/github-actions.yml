@@ -17,6 +17,7 @@ jobs:
         run: docker build . --file Dockerfile --tag go-hello:$(date +%s)
 
       - name: run tests
+        run: docker run -p 80:3000
         uses: liatrio/github-actions/apprentice-action@master
 
 #      - name: Publish
