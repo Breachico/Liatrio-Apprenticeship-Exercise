@@ -24,7 +24,7 @@ jobs:
       - name: run tests
         uses: Breachico/github-actions-Liatrio/apprentice-action@master
 
-  publishing: # ref: https://github.com/marketplace/actions/build-and-push-docker-images
+  docker-publishing: # ref: https://github.com/marketplace/actions/build-and-push-docker-images
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -45,7 +45,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: breachico/go-hello:$TAG
+          tags: breachico/go-hello:${{ env.TAG }}
       
 
 
