@@ -18,7 +18,7 @@ jobs:
         run: docker run -d -p 80:8080 go-hello:test
  
       - name: run tests
-        uses: liatrio/github-actions/apprentice-action@master
+        uses: Breachico/github-actions-Liatrio/apprentice-action@master
 
 #      - name: Run Docker Image
 #        run: docker run -p 80:3000 go-hello:latest
