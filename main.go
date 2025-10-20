@@ -16,7 +16,7 @@ func main() {
   app.Get("/", func(c *fiber.Ctx) error {
     return c.JSON(fiber.Map{
       "message": "My name is Bryce Emery",
-      "timestamp": time.Now().UnixMilli(),
+      "timestamp": time.Now().UnixMilli(),// 13 digits vs Unix() 10 digit precision
     })
   })
 
@@ -26,6 +26,6 @@ func main() {
 
   
   // Start the server on port 8080
-  log.Fatal(app.Listen("0.0.0.0:3000"))
+  log.Fatal(app.Listen("0.0.0.0:8080")) // Not :3000 for easier debugging
   
 }
