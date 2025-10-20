@@ -4,9 +4,10 @@ on:
   push:
     branches: ["main", "github_actions", "dockerhub_publish"]
 
+env:
+  TAG: ${{github.run_number}}.${{github.sha}} # Decided on with ChatGPT Assistance
+
 jobs:
-  env:
-    TAG: ${{github.run_number}}.${{github.sha}} # Decided on with ChatGPT Assistance
   build:
     runs-on: ubuntu-latest
     steps:
