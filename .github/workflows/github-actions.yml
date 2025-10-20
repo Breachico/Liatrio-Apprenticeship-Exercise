@@ -7,15 +7,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      TAG: ${{github.run_number}}.${{github.sha}} # Decided on with ChatGPT Assistance
     steps:
       - uses: actions/checkout@v2
 
       - name: Build Docker Image
-        run: docker build . --file Dockerfile --tag go-hello:test
+        run: docker build . --file Dockerfile --tag go-hello:$TAG
 
       - name: Build From Image
-        run: docker run -d -p 80:8080 go-hello:test
+        run: docker run -d -p 80:8080 go-hello:$TAG
  
       - name: run tests
         uses: Breachico/github-actions-Liatrio/apprentice-action@master
