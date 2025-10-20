@@ -24,6 +24,7 @@ jobs:
         uses: Breachico/github-actions-Liatrio/apprentice-action@master
 
     publishing: # ref: https://github.com/marketplace/actions/build-and-push-docker-images
+      needs: build
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v5
