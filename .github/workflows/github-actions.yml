@@ -2,7 +2,7 @@ name: Apprenticeship Exercise Github Actions
 run-name: $${{ github.actor }} is running Github Actions.
 on:
   push:
-    branches: ["main", "github_actions", "dockerhub_publish", "deploy"]
+    branches: ["main", "github_actions", "dockerhub_publish", "demo"]
 
 env:
   TAG: v0.${{github.run_number}} # Decided on with ChatGPT Assistance

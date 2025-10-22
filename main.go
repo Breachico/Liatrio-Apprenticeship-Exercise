@@ -4,7 +4,7 @@ import (
   //"os" // Prempting for later for Docker 
   "time"
   "log"
-  "github.com/gofiber/fiber/v2"
+  "github.com/gofiber/fiber/v3"
 )
 
 // Ref for JSON in GO: https://docs.gofiber.io/api/ctx#json
@@ -13,7 +13,7 @@ func main() {
   app := fiber.New()
   
   // Define a route for the GET method on the root path '/'
-  app.Get("/", func(c *fiber.Ctx) error {
+  app.Get("/", func(c fiber.Ctx) error {
     return c.JSON(fiber.Map{
       "message": "My name is Bryce Emery",
       "timestamp": time.Now().UnixMilli(),// 13 digits vs Unix() 10 digit precision
