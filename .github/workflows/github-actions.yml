@@ -5,7 +5,7 @@ on:
     branches: ["main", "github_actions", "dockerhub_publish"]
 
 env:
-  TAG: ${{github.run_number}}.${{github.sha}} # Decided on with ChatGPT Assistance
+  TAG: v0.${{github.run_number}} # Decided on with ChatGPT Assistance
 
 jobs:
   build:
@@ -46,13 +46,10 @@ jobs:
         with:
           push: true
           tags: breachico/go-hello:${{ env.TAG }}
+#  cloud-deploy:    
+#    needs: docker-publishing
+#    runs-on: ubuntu-latest
       
-
-
- #   needs: build
-  #  runs-on: ubuntu-latest
-  
-#      - name: Deploy
       
 
 
