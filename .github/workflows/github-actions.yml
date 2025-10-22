@@ -46,13 +46,4 @@ jobs:
         with:
           push: true
           tags: breachico/go-hello:${{ env.TAG }}
-#  cloud-deploy:    
-#    needs: docker-publishing
-#    runs-on: ubuntu-latest
-      
-      
-
-
-
-
 
